@@ -3,18 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --accent: #e39a78;
+  --accent-copper: theme(colors.accent.copper);
+  --accent-lavender: theme(colors.accent.lavender);
+  --surface: theme(colors.surface.base);
+  --glow-steel: theme(colors.glow.steel);
+  --glow-plum: theme(colors.glow.plum);
+  --accent: var(--accent-copper);
+
+  /* surface.base and surface.violet at the alphas the gradients need. Written
+     out because Tailwind's opacity modifier cannot reach inside a gradient. */
+  --fade: rgb(10 10 12 / 0);
+  --scrim-faint: rgb(10 10 12 / 0.1);
+  --scrim-soft: rgb(10 10 12 / 0.2);
+  --scrim-deep: rgb(10 10 12 / 0.85);
+  --scrim-full: rgb(10 10 12 / 0.92);
+  --scrim-violet: rgb(15 11 20 / 0.92);
 }
 
 html {
   scroll-behavior: smooth;
-  background: #0a0b0e;
+  background: theme(colors.surface.base);
 }
 
 body {
-  background: #0a0b0e;
-  color: #ece8e1;
-  font-family: Manrope, system-ui, sans-serif;
+  background: theme(colors.surface.base);
+  color: theme(colors.content.primary);
+  font-family: Inter, system-ui, sans-serif;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
@@ -39,34 +53,34 @@ body {
     @apply inline-flex min-h-[48px] items-center justify-center rounded-full px-7 text-sm font-medium tracking-[0.02em] transition-colors duration-300;
   }
   .btn-fill {
-    @apply bg-bone text-ink hover:text-ink;
+    @apply bg-content-primary text-surface-base hover:text-surface-base;
   }
   .btn-fill:hover {
     background: var(--accent);
   }
   .btn-line {
-    @apply border border-bone/35 text-bone hover:border-bone hover:bg-bone/10;
+    @apply border border-line-strong text-content-primary hover:border-content-primary hover:bg-line-hairline;
   }
   .navlink {
-    @apply text-sm tracking-[0.04em] text-soft transition-colors duration-200;
+    @apply text-sm tracking-[0.04em] text-content-secondary transition-colors duration-200;
   }
   .navlink:hover {
     color: var(--accent);
   }
   .field {
-    @apply min-h-[52px] w-full rounded-xl border border-bone/20 bg-panel px-4 py-3.5 text-[15px] text-bone transition-colors placeholder:text-dim focus:outline-none;
+    @apply min-h-[52px] w-full rounded-xl border border-line-soft bg-surface-raised px-4 py-3.5 text-small text-content-primary transition-colors placeholder:text-content-faint focus:outline-none;
   }
   .field:focus {
-    border-color: #b48cdb;
+    border-color: theme(colors.accent.lavender);
   }
   .lbl {
-    @apply text-[13px] font-medium tracking-[0.04em] text-soft;
+    @apply text-meta font-medium tracking-[0.04em] text-content-secondary;
   }
   .panel {
-    @apply rounded-[28px] border border-white/10 bg-panel p-6 md:p-9;
+    @apply rounded-[28px] border border-line-hairline bg-surface-raised p-6 md:p-9;
   }
   .row {
-    @apply flex flex-wrap gap-x-8 gap-y-2 border-b border-white/10 py-5;
+    @apply flex flex-wrap gap-x-8 gap-y-2 border-b border-line-hairline py-5;
   }
   .gutter {
     padding-left: clamp(20px, 5vw, 72px);
@@ -79,7 +93,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #b48cdb;
+  outline: 2px solid theme(colors.accent.lavender);
   outline-offset: 3px;
 }
 

@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
-import "@fontsource/bodoni-moda/400.css";
-import "@fontsource/bodoni-moda/500.css";
-import "@fontsource/bodoni-moda/400-italic.css";
-import "@fontsource/bodoni-moda/500-italic.css";
-import "@fontsource/manrope/300.css";
-import "@fontsource/manrope/400.css";
-import "@fontsource/manrope/500.css";
-import "@fontsource/manrope/600.css";
+import "@fontsource/instrument-serif/400.css";
+import "@fontsource/instrument-serif/400-italic.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Embroidered Hoodies",
+  title: brand.name,
   description:
     "Two hoodies where the design is the point. Embroidery runs from shoulder to cuff on both sleeves.",
 };

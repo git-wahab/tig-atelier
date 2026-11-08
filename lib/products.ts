@@ -1,3 +1,5 @@
+import type { AccentToken, GlowToken } from "./tokens";
+
 export type Img = { src: string; w: number; h: number };
 
 export type Product = {
@@ -6,8 +8,8 @@ export type Product = {
   /** First and last words around the italic accent word in the hero title. */
   titleParts: { before: string; accent: string; after: string };
   number: string; // "Design 01"
-  accent: string; // CSS color for eyebrow, rails, buttons
-  glow: string; // dark tint used in radial glows
+  accent: AccentToken;
+  glow: GlowToken;
   colour: string; // fleece colour
   threadNote: string;
   tagline: string;
@@ -33,8 +35,8 @@ export const products: Product[] = [
     name: "Whispering Crane Bird",
     titleParts: { before: "Whispering ", accent: "Crane", after: " Bird" },
     number: "Design 01",
-    accent: "#E39A78",
-    glow: "#1B2230",
+    accent: "copper",
+    glow: "steel",
     colour: "Ivory",
     threadNote: "Ivory fleece with blue, silver and copper-rose thread.",
     tagline:
@@ -84,8 +86,8 @@ export const products: Product[] = [
     name: "Midnight Bloom",
     titleParts: { before: "Midnight ", accent: "Bloom", after: "" },
     number: "Design 02",
-    accent: "#B48CDB",
-    glow: "#2A1A3A",
+    accent: "lavender",
+    glow: "plum",
     colour: "Charcoal",
     threadNote: "Charcoal fleece with violet and green thread.",
     tagline: "Lavender climbing both sleeves, stitched in violet and green on deep charcoal.",

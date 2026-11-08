@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
-import CartView from "@/components/CartView";
+import CartView from "@/components/cart/CartView";
+import SiteFooter from "@/components/layout/SiteFooter";
+import SiteHeader from "@/components/layout/SiteHeader";
+import PageShell from "@/components/ui/PageShell";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Cart and Checkout · Embroidered Hoodies",
+  title: `Cart and Checkout · ${brand.name}`,
 };
 
 export default function CartPage() {
   return (
-    <div className="mx-auto min-h-screen w-full max-w-[1440px] overflow-x-clip">
+    <PageShell accent="copper" fillViewport>
       <SiteHeader />
       <CartView />
       <SiteFooter />
-    </div>
+    </PageShell>
   );
 }
