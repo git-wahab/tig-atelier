@@ -21,6 +21,25 @@ npm run build
 npm start
 ```
 
+## Tests
+
+```bash
+npm test          # once
+npm run test:watch
+```
+
+Vitest with React Testing Library, in `test/`. 148 tests covering the cart (state,
+localStorage, other tabs), prices and formatting, the product and FAQ data, the
+contact endpoint, and the five interactive components. No browser or dev server
+needed; the suite runs in about four seconds.
+
+| File | Covers |
+| --- | --- |
+| `test/lib.test.ts` | `cx`, `money`, `priceOf`, `getProduct`, and the product and FAQ data |
+| `test/cart.test.tsx` | `CartProvider`: add, quantity, remove, clear, saving, other tabs |
+| `test/contact-route.test.ts` | `POST /api/contact` accepts and rejects |
+| `test/components.test.tsx` | `ProductBuyPanel`, `CartButton`, `CartView`, `ContactForm`, `FaqList` |
+
 ## Pages
 
 | Route | What it is |

@@ -18,5 +18,8 @@ export function money(amount: number): string {
 }
 
 export function priceOf(slug: string): number {
-  return prices[slug] ?? 0;
+  // A plain index read would reach Object.prototype, so an unknown slug such as
+  // "toString" would return a function rather than the number promised above.
+  const price = prices[slug];
+  return typeof price === "number" ? price : 0;
 }
