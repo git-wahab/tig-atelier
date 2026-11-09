@@ -6,7 +6,6 @@ import Scrim from "@/components/ui/Scrim";
 import { cx } from "@/lib/cx";
 import { money, priceOf } from "@/lib/config";
 import type { Product } from "@/lib/products";
-import { accentVar } from "@/lib/tokens";
 
 type Props = {
   product: Product;
@@ -20,7 +19,6 @@ export default function ProductCard({ product: p, variant = "tile" }: Props) {
   return (
     <Link
       href={`/products/${p.slug}`}
-      style={{ "--accent": accentVar[p.accent] } as React.CSSProperties}
       className={cx(
         "group relative isolate flex flex-col justify-end overflow-hidden rounded-[28px] text-content-primary",
         tile ? "min-h-[620px] p-7 md:min-h-[760px] md:p-10" : "min-h-[520px] p-9",
@@ -41,7 +39,7 @@ export default function ProductCard({ product: p, variant = "tile" }: Props) {
         className="-z-10"
       />
 
-      <Eyebrow className="mb-3">{p.number}</Eyebrow>
+      <Eyebrow className="mb-3 text-content-primary">{p.number}</Eyebrow>
       <Display level={3} size="md" className="mb-3">
         {p.name}
       </Display>

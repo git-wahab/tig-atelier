@@ -37,7 +37,7 @@ export default function Craft() {
             size="lg"
             title={
               <>
-                Thread you can <em className="italic text-accent">see rise.</em>
+                Thread you can <em className="italic">see rise.</em>
               </>
             }
           />

@@ -1,8 +1,8 @@
 import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
+import Collection from "@/components/product/Collection";
 import SleeveStory from "@/components/product/SleeveStory";
 import Closing from "@/components/sections/home/Closing";
-import Collection from "@/components/sections/home/Collection";
 import Craft from "@/components/sections/home/Craft";
 import Hero from "@/components/sections/home/Hero";
 import Statement from "@/components/sections/home/Statement";
@@ -14,14 +14,7 @@ export default function HomePage() {
 
   return (
     <PageShell accent="copper">
-      <SiteHeader
-        overlay
-        links={[
-          { href: "#collection", label: "Collection" },
-          { href: "#sleeves", label: "The sleeves" },
-          { href: "#craft", label: "Craft" },
-        ]}
-      />
+      <SiteHeader overlay />
       <Hero />
       <Statement />
       <SleeveStory

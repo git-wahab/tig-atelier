@@ -36,7 +36,7 @@ export default function Closing() {
       />
 
       <Display level={2} size="xl" className="rise relative max-w-[900px]">
-        The sleeves tell it. <em className="italic text-accent">You wear it.</em>
+        The sleeves tell it. <em className="italic">You wear it.</em>
       </Display>
       <div className="relative flex flex-wrap justify-center gap-3.5">
         <Button href={`/products/${crane.slug}`}>Shop {crane.name}</Button>

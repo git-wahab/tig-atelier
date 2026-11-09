@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="relative z-[2] flex max-w-[640px] flex-[1_1_440px] flex-col gap-7">
         <Eyebrow>Embroidered hoodies · Two designs</Eyebrow>
         <Display level={1} size="hero">
-          Wear the <em className="italic text-accent">design.</em>
+          Wear the <em className="italic">design.</em>
         </Display>
         <Lede className="max-w-[480px]">
           One embroidered scene runs from the shoulder to the cuff on both sleeves. The hoodie is the

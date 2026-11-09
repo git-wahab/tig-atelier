@@ -9,7 +9,7 @@ export default function SiteFooter() {
     <footer className="gutter mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-8 border-t border-line-hairline py-12">
       <Logo />
       <nav className="flex flex-wrap gap-7" aria-label="Footer">
-        <Link href="/" className="navlink">
+        <Link href="/collection" className="navlink">
           Collection
         </Link>
         {products.map((p) => (
@@ -17,10 +17,10 @@ export default function SiteFooter() {
             {p.name}
           </Link>
         ))}
-        <Link href="/help#faq" className="navlink">
+        <Link href="/faq" className="navlink">
           FAQ
         </Link>
-        <Link href="/help#contact" className="navlink">
+        <Link href="/contact" className="navlink">
           Contact
         </Link>
       </nav>

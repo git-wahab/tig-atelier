@@ -11,7 +11,7 @@ export default function Collection() {
         <Display level={2} size="lg">
           Two designs.
           <br />
-          <em className="italic text-accent-lavender">Choose your sleeves.</em>
+          <em className="italic">Choose your sleeves.</em>
         </Display>
         <Lede size="body" className="max-w-[340px]">
           Same fit, same fleece. The difference is the story stitched into the arms.

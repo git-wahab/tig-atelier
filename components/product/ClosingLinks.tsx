@@ -9,7 +9,7 @@ export default function ClosingLinks() {
   return (
     <Section rhythm="band" className="flex flex-col items-center gap-7 text-center">
       <Display level={2} size="lg" className="rise max-w-[760px]">
-        Still deciding between <em className="italic text-accent">two</em> sleeves?
+        Still deciding between <em className="italic">two</em> sleeves?
       </Display>
       <div className="flex flex-wrap justify-center gap-3.5">
         <Button href={`/products/${crane.slug}`}>{crane.name}</Button>

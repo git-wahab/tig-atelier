@@ -110,7 +110,7 @@ export default function CartView() {
           ))}
         </ol>
         <Display level={1} size="xl">
-          {title.lead} <em className="italic text-accent">{title.accented}</em>
+          {title.lead} <em className="italic">{title.accented}</em>
         </Display>
       </Section>
 
@@ -383,8 +383,8 @@ export default function CartView() {
               </div>
             </div>
             <div className="flex flex-wrap gap-3.5">
-              <Button href="/">Back to the collection</Button>
-              <Button href="/help#contact" variant="line">
+              <Button href="/collection">Back to the collection</Button>
+              <Button href="/contact" variant="line">
                 Contact us
               </Button>
             </div>

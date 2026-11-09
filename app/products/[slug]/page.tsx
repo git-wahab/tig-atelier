@@ -34,14 +34,7 @@ export default function ProductPage({ params }: Props) {
 
   return (
     <PageShell accent={product.accent}>
-      <SiteHeader
-        overlay
-        links={[
-          { href: "/", label: "All designs" },
-          { href: "#sleeves", label: "The sleeves" },
-          { href: "#buy", label: "Buy" },
-        ]}
-      />
+      <SiteHeader overlay />
       <Hero product={product} />
       <Statement product={product} />
       <SleeveStory product={product} eyebrow="Both sleeves" intro={product.sleeveIntro} />

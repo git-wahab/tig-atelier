@@ -6,16 +6,16 @@ import { cx } from "@/lib/cx";
 type Props = {
   /** Float the header over the first section (used on pages with a full-bleed hero). */
   overlay?: boolean;
-  links?: { href: string; label: string }[];
 };
 
-const defaultLinks = [
-  { href: "/", label: "All designs" },
-  { href: "/help#faq", label: "FAQ" },
-  { href: "/help#contact", label: "Contact" },
+/** The same three links on every page — no page overrides them. */
+const links = [
+  { href: "/collection", label: "Collection" },
+  { href: "/contact", label: "Contact us" },
+  { href: "/faq", label: "FAQs" },
 ];
 
-export default function SiteHeader({ overlay = false, links = defaultLinks }: Props) {
+export default function SiteHeader({ overlay = false }: Props) {
   return (
     <header
       className={cx(

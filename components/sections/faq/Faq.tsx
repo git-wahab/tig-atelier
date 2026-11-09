@@ -1,4 +1,4 @@
-import FaqList from "@/components/sections/help/FaqList";
+import FaqList from "@/components/sections/faq/FaqList";
 import Section from "@/components/ui/Section";
 import SectionIntro from "@/components/ui/SectionIntro";
 

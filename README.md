@@ -26,9 +26,11 @@ npm start
 | Route | What it is |
 | --- | --- |
 | `/` | Homepage |
+| `/collection` | Both designs, side by side |
 | `/products/whispering-crane-bird` | Product page |
 | `/products/midnight-bloom` | Product page |
-| `/help` | FAQ and contact form (`#faq`, `#contact`) |
+| `/faq` | The FAQ |
+| `/contact` | Contact form and details |
 | `/cart` | Bag, delivery details and confirmation |
 | `/api/contact` | Receives the contact form |
 
